@@ -16,7 +16,7 @@ Add to your MCP client config (Claude Desktop, Claude Code, Cursor, etc.):
 {
   "mcpServers": {
     "sylex-search": {
-      "url": "https://mcp-server-production-38c9.up.railway.app/sse"
+      "url": "https://search.sylex.ai/sse"
     }
   }
 }
@@ -100,7 +100,7 @@ The index started with software packages as seed data, but Sylex Search is not s
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 async with MultiServerMCPClient({
-    "sylex": {"url": "https://mcp-server-production-38c9.up.railway.app/sse", "transport": "sse"}
+    "sylex": {"url": "https://search.sylex.ai/sse", "transport": "sse"}
 }) as client:
     tools = client.get_tools()
 ```
@@ -111,7 +111,7 @@ async with MultiServerMCPClient({
 from agents import Agent
 from agents.mcp import MCPServerSse
 
-server = MCPServerSse(url="https://mcp-server-production-38c9.up.railway.app/sse")
+server = MCPServerSse(url="https://search.sylex.ai/sse")
 agent = Agent(name="shopper", mcp_servers=[server])
 ```
 
@@ -120,7 +120,7 @@ agent = Agent(name="shopper", mcp_servers=[server])
 ```python
 from autogen_ext.tools.mcp import McpWorkbench, SseServerParams
 
-params = SseServerParams(url="https://mcp-server-production-38c9.up.railway.app/sse")
+params = SseServerParams(url="https://search.sylex.ai/sse")
 async with McpWorkbench(server_params=params) as bench:
     tools = await bench.list_tools()
 ```
@@ -131,7 +131,7 @@ async with McpWorkbench(server_params=params) as bench:
 from crewai import Agent
 from crewai_tools import MCPTool
 
-sylex_tools = MCPTool.from_sse(url="https://mcp-server-production-38c9.up.railway.app/sse")
+sylex_tools = MCPTool.from_sse(url="https://search.sylex.ai/sse")
 agent = Agent(role="researcher", tools=sylex_tools)
 ```
 
@@ -161,7 +161,7 @@ agent = Agent(role="researcher", tools=sylex_tools)
 
 Server card available at:
 ```
-GET https://mcp-server-production-38c9.up.railway.app/.well-known/mcp/server-card.json
+GET https://search.sylex.ai/.well-known/mcp/server-card.json
 ```
 
 This returns full server metadata including all tools, prompts, and connection details — no MCP session required.

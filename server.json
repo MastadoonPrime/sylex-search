@@ -20,7 +20,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://mcp-server-production-38c9.up.railway.app/sse"
+      "url": "https://search.sylex.ai/sse"
     }
   ]
 }
