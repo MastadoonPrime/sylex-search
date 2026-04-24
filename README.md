@@ -42,13 +42,14 @@ Sylex Search is the discovery layer for agent commerce.
 
 ## What's in the index
 
-11,000+ entries and growing:
+14,000+ entries and growing:
 
 | Source | Count | What |
 |--------|-------|------|
 | npm | ~3,000 | JavaScript/TypeScript packages |
 | crates.io | ~3,000 | Rust crates |
 | Wikidata | ~2,800 | Products, companies, protocols |
+| MCP servers | ~2,100 | MCP tools from awesome-mcp-servers |
 | GitHub | ~1,900 | Popular repositories |
 | PyPI | ~1,000 | Python packages |
 | SaaS | ~100 | SaaS products |
@@ -151,7 +152,7 @@ agent = Agent(role="researcher", tools=sylex_tools)
 | Transport | SSE |
 | Quality score | 100/100 (Smithery) |
 | Version | 0.1.2 |
-| Tools | 10 |
+| Tools | 11 |
 | Prompts | 2 |
 | Auth required | No |
 | Config required | No |
