@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.MastadoonPrime/sylex-search",
+  "description": "Universal search engine for AI agents. Discover products, services, and businesses via MCP.",
+  "repository": {
+    "url": "https://github.com/MastadoonPrime/sylex-search",
+    "source": "github"
+  },
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "sylex-search",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://mcp-server-production-38c9.up.railway.app/sse"
+    }
+  ]
+}
